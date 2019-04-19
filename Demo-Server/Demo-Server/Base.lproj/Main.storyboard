@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nnM-4F-DJP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Wjn-BQ-Tfk">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="nnM-4F-DJP" customClass="ViewController" customModule="Demo_Server" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bxk-kG-0Fi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F0o-VD-B4m">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f6h-eq-ryX" customClass="SRAirContentView" customModule="SRAirViews">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tek-6c-hxB">
+                                        <rect key="frame" x="35" y="542" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="7Hi-Jd-THa"/>
+                                            <constraint firstAttribute="width" secondItem="Tek-6c-hxB" secondAttribute="height" multiplier="1:1" id="hce-SF-O1L"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="to_my_location"/>
+                                        <connections>
+                                            <action selector="toGPSLocation:" destination="nnM-4F-DJP" eventType="touchUpInside" id="DBW-0R-biD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m07-zW-sGB">
+                                        <rect key="frame" x="35" y="487" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="m07-zW-sGB" secondAttribute="height" multiplier="1:1" id="kjR-RR-0Ae"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="start"/>
+                                        <connections>
+                                            <action selector="switchSketchStatus:" destination="nnM-4F-DJP" eventType="touchUpInside" id="oXx-5i-Lz1"/>
+                                        </connections>
+                                    </button>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9IP-ud-29n">
+                                        <rect key="frame" x="146" y="20" width="83" height="29"/>
+                                        <segments>
+                                            <segment title="高德"/>
+                                            <segment title="百度"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="switchService:" destination="nnM-4F-DJP" eventType="valueChanged" id="d6A-yx-inb"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8E9-dM-DCC">
+                                        <rect key="frame" x="35" y="432" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="8E9-dM-DCC" secondAttribute="height" id="GcH-pP-7jl"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="reduce"/>
+                                        <connections>
+                                            <action selector="reduceZoomLevel:" destination="nnM-4F-DJP" eventType="touchUpInside" id="vao-Sb-IXE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="9IP-ud-29n" firstAttribute="centerX" secondItem="f6h-eq-ryX" secondAttribute="centerX" id="41Q-Y4-vGD"/>
+                                    <constraint firstItem="Tek-6c-hxB" firstAttribute="leading" secondItem="f6h-eq-ryX" secondAttribute="leading" constant="35" id="JU0-Ar-OQm"/>
+                                    <constraint firstItem="9IP-ud-29n" firstAttribute="top" secondItem="f6h-eq-ryX" secondAttribute="top" constant="20" id="SzY-Pc-t2x"/>
+                                    <constraint firstItem="m07-zW-sGB" firstAttribute="top" secondItem="8E9-dM-DCC" secondAttribute="bottom" constant="10" id="TZ7-gO-PPl"/>
+                                    <constraint firstItem="8E9-dM-DCC" firstAttribute="width" secondItem="m07-zW-sGB" secondAttribute="width" id="Tdr-v7-LS8"/>
+                                    <constraint firstAttribute="bottom" secondItem="Tek-6c-hxB" secondAttribute="bottom" constant="60" id="ZXj-lU-Uyx"/>
+                                    <constraint firstItem="Tek-6c-hxB" firstAttribute="top" secondItem="m07-zW-sGB" secondAttribute="bottom" constant="10" id="gsW-Ul-50z"/>
+                                    <constraint firstItem="m07-zW-sGB" firstAttribute="centerX" secondItem="Tek-6c-hxB" secondAttribute="centerX" id="jB3-94-Lnt"/>
+                                    <constraint firstItem="8E9-dM-DCC" firstAttribute="centerX" secondItem="m07-zW-sGB" secondAttribute="centerX" id="jze-li-SXX"/>
+                                    <constraint firstItem="Tek-6c-hxB" firstAttribute="width" secondItem="m07-zW-sGB" secondAttribute="width" id="srx-IV-1Je"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="f6h-eq-ryX" firstAttribute="bottom" secondItem="ZE1-PE-r4O" secondAttribute="bottom" id="Mm0-QH-r3N"/>
+                            <constraint firstItem="F0o-VD-B4m" firstAttribute="leading" secondItem="ZE1-PE-r4O" secondAttribute="leading" id="YDr-LK-O4B"/>
+                            <constraint firstItem="F0o-VD-B4m" firstAttribute="bottom" secondItem="ZE1-PE-r4O" secondAttribute="bottom" id="g2a-lY-YGc"/>
+                            <constraint firstItem="ZE1-PE-r4O" firstAttribute="trailing" secondItem="f6h-eq-ryX" secondAttribute="trailing" id="hki-ht-Od0"/>
+                            <constraint firstItem="F0o-VD-B4m" firstAttribute="top" secondItem="ZE1-PE-r4O" secondAttribute="top" id="iAC-Bu-Ase"/>
+                            <constraint firstItem="ZE1-PE-r4O" firstAttribute="trailing" secondItem="F0o-VD-B4m" secondAttribute="trailing" id="jlq-0C-Ss1"/>
+                            <constraint firstItem="f6h-eq-ryX" firstAttribute="leading" secondItem="ZE1-PE-r4O" secondAttribute="leading" id="tkU-u7-vhb"/>
+                            <constraint firstItem="f6h-eq-ryX" firstAttribute="top" secondItem="ZE1-PE-r4O" secondAttribute="top" id="wkE-nw-y8B"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZE1-PE-r4O"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnTurn" destination="m07-zW-sGB" id="c1J-zq-TQg"/>
+                        <outlet property="mapContainer" destination="F0o-VD-B4m" id="2cM-DQ-t8k"/>
+                        <outlet property="segment" destination="9IP-ud-29n" id="FcU-TN-bfP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SIZ-Av-X8A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33" y="14"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="reduce" width="30" height="30"/>
+        <image name="start" width="30" height="30"/>
+        <image name="to_my_location" width="30" height="30"/>
+    </resources>
+</document>
