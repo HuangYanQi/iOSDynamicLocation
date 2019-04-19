@@ -109,7 +109,7 @@ def getConfig():
         config.focus = mouse.position()
         input("2、将鼠标移动至 -> [工程" + name + "]" + "窗口 -> [修改GPX文件的按钮处] -> [Enter]确认")
         config.locBtn = mouse.position()
-        input("2、将鼠标移动至 -> [工程" + name + "]" + "窗口 -> [选中GPX文件的按钮处] -> [Enter]确认")
+        input("3、将鼠标移动至 -> [工程" + name + "]" + "窗口 -> [选中GPX文件的按钮处] -> [Enter]确认")
         config.chooseGpx = mouse.position()
         configs.append(config)
     fn = 'config.pkl'
