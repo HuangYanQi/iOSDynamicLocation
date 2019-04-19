@@ -4,6 +4,8 @@
 # iOSDynamicLocation
 iOS中高德地图、百度地图在模拟器上，通过GPX文件，利用脚本动态修改目标模拟器位置的示例。
 
+![运行效果](https://github.com/HuangYanQi/assets_repository/blob/master/images/运行效果gif.gif)
+
 #使用方式
 ###准备
 下载整个项目
@@ -53,6 +55,8 @@ GPXPaths = ["上述GPX文件路径"]
 ![第三步2](https://github.com/HuangYanQi/assets_repository/blob/master/images/3-2.png)
 
 4、随后就能通过在***模拟器server***点击地图上的位置，动态修改***模拟器Client***的位置
+
+5、在***模拟器server***上面选择坐标点后，手指一定要离开触控板，或者不要移动鼠标。否则会影响脚本操作鼠标
 
 ##最后
 本项目能够帮助你在地图相关iOSapp开发中提高调试效率，希望你能支持[996.icu](https://996.icu/#/en_US)，也希望更多的同行，在编程的路上能拥有更多属于自己的时间陪陪家人
