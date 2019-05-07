@@ -38,6 +38,7 @@ GPXPaths = ["上述GPX文件路径"]
 1、打开Demo-Server编译运行在模拟器1，以下简称***模拟器Server***
 
 2、打开你需要修改定位的模拟器工程运行在模拟器2，以下简称***模拟器Client***
+
 3、打开终端cd到**dynamicLocation.py**所在目录，并运行
 
 ![准备配置](https://github.com/HuangYanQi/assets_repository/blob/master/images/准备运行.png)
