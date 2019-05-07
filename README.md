@@ -6,8 +6,8 @@ iOS中高德地图、百度地图在模拟器上，通过GPX文件，利用脚�
 
 ![运行效果](https://github.com/HuangYanQi/assets_repository/blob/master/images/运行效果小gif.gif)
 
-#使用方式
-###准备
+# 使用方式
+### 准备
 下载整个项目
 
 ```
@@ -34,15 +34,14 @@ pod install
 GPXPaths = ["上述GPX文件路径"]
 ```
 
-###运行
-
+### 运行
 1、打开Demo-Server编译运行在模拟器1，以下简称***模拟器Server***
 
 2、打开你需要修改定位的模拟器工程运行在模拟器2，以下简称***模拟器Client***
 3、打开终端cd到**dynamicLocation.py**所在目录，并运行
 
 ![准备配置](https://github.com/HuangYanQi/assets_repository/blob/master/images/准备运行.png)
-###脚本步骤说明
+### 脚本步骤说明
 1、第一步将鼠标移动至XCode目标工程的空白可以点击的地方（不要点击，如窗口边框上），按回车
 
 2、第二步将鼠标移动选择GPX文件的按钮处（不要点击），按回车
@@ -59,7 +58,7 @@ GPXPaths = ["上述GPX文件路径"]
 
 5、在***模拟器server***上面选择坐标点后，手指一定要离开触控板，或者不要移动鼠标。否则会影响脚本操作鼠标
 
-##最后
+## 最后
 本项目能够帮助你在地图相关iOSapp开发中提高调试效率，希望你能支持[996.icu](https://996.icu/#/en_US)，也希望更多的同行，在编程的路上能拥有更多属于自己的时间陪陪家人
 
 
